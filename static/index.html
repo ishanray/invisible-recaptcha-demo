@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById('demo-form').submit()
+        }
+    </script>
+</head>
+
+<body>
+    <form id='demo-form' action="/form" method="POST">
+        <input type="text" name="first_name" placeholder="first name">
+        <br>
+        <input type="text" name="email" placeholder="email">
+        <br>
+        <input type="password" name="password" placeholder="password">
+        <br>
+        <button class="g-recaptcha" data-sitekey="6LcxkjgUAAAAAM_UHzMcV2nYrln2fuwxljRrofm4" data-callback='onSubmit'>Submit</button>
+        <br/>
+    </form>
+</body>
+
+</html>
